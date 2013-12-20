@@ -1,0 +1,29 @@
+<%= form_for(@sangano) do |f| %>
+  <% if @sangano.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sangano.errors.count, "error") %> prohibited this sangano from being saved:</h2>
+
+      <ul>
+      <% @sangano.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :apellido %><br />
+    <%= f.text_field :apellido %>
+  </div>
+  <div class="field">
+    <%= f.label :descripcion %><br />
+    <%= f.text_area :descripcion %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

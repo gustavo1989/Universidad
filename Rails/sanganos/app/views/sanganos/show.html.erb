@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @sangano.name %>
+</p>
+
+<p>
+  <b>Apellido:</b>
+  <%= @sangano.apellido %>
+</p>
+
+<p>
+  <b>Descripcion:</b>
+  <%= @sangano.descripcion %>
+</p>
+
+
+<%= link_to 'Edit', edit_sangano_path(@sangano) %> |
+<%= link_to 'Back', sanganos_path %>

@@ -1,0 +1,27 @@
+<h1>Listing sanganos</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Apellido</th>
+    <th>Descripcion</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @sanganos.each do |sangano| %>
+  <tr>
+    <td><%= sangano.name %></td>
+    <td><%= sangano.apellido %></td>
+    <td><%= sangano.descripcion %></td>
+    <td><%= link_to 'Show', sangano %></td>
+    <td><%= link_to 'Edit', edit_sangano_path(sangano) %></td>
+    <td><%= link_to 'Destroy', sangano, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Sangano', new_sangano_path %>
